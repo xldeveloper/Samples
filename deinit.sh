@@ -13,13 +13,6 @@ if [ -d Scripts ]; then
 	git submodule deinit Scripts;
 	if [ "$?" = "0" ]; then
 		git rm Scripts;
-	else
-		git submodule deinit -f Scripts;
-		if [ "$?" = "0" ]; then
-			rm -rf Scripts;
-		fi;
-	fi;
-	if [ "$?" = "0" ]; then
 		rm -rf '.git/modules/Scripts';
 	else
 		error_exit "Cannot remove sub-module 'Scripts'";

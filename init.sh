@@ -6,4 +6,3 @@ if [ ! -d Scripts ]; then
 	git submodule update; 
 fi;
 git submodule update; 
-
