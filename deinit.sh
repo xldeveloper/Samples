@@ -14,6 +14,7 @@ if [ -d Scripts ]; then
 	if [ "$?" = "0" ]; then
 		git rm Scripts;
 		rm -rf '.git/modules/Scripts';
+		git commit -m "Removed 'Scripts' git sub-module"
 	else
 		error_exit "Cannot remove sub-module 'Scripts'";
 	fi;
