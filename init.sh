@@ -10,6 +10,7 @@ if [ ! -d Scripts ]; then
 	# add other sub-modules
 	if [ -d Scripts ]; then 
 		./Scripts/git-add-submodule-pairs.sh "https://github.com/xldeveloper/Sample2D.git" "Sample2D" "https://github.com/xldeveloper/Sample3D.git" "Sample3D";
+		git commit -m "Added sub-modules";
 	fi;
 fi;
 #check if '.gitmodules' file exist (!0)
