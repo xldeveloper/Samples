@@ -23,6 +23,7 @@ if [ -d Scripts ]; then
 		if [ $modulesdircontent -eq 0 ] && [ ! $gitmodulesfile -eq 0 ];
 		then
 			git rm '.gitmodules';
+			git commit -m "Removed useless '.gitmodules' file"
 		fi;
 		
 	else
