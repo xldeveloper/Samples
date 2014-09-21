@@ -19,7 +19,7 @@ if [ -d Scripts ]; then
 		# check if '.git/modules' dir is empty (0)
 		modulesdircontent=$(ls -a '.git/modules' | sed -e "/\.$/d" | wc -l);
 		#check if '.gitmodules' file exist (!0)
-		gitmodulesfile=$(ls -a '.gitmodules' | sed -e "/\.$/d" | wc -l);
+		gitmodulesfile=$(ls -a '.gitmodules' 2>/dev/null | sed -e "/\.$/d" | wc -l);
 		if [ $modulesdircontent -eq 0 ] && [ ! $gitmodulesfile -eq 0 ]; then
 			git rm '.gitmodules';
 			git commit -m "Removed useless '.gitmodules' file"
